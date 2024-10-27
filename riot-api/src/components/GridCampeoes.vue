@@ -18,7 +18,7 @@ const router = useRouter();
 
 const props = defineProps({
   listaCampeoes: {
-    type: Array,
+    type: Object,
     required: true
   }
 })
