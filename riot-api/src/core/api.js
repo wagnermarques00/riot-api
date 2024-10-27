@@ -1,5 +1,6 @@
 export default class Api {
   BASE_URL = 'https://ddragon.leagueoflegends.com/cdn'
+  static versaoAtualLoL = ''
 
   async get (baseUrl) {
     try {
