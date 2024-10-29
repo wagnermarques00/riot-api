@@ -5,4 +5,9 @@ export default class ApiCampeoes extends Api {
     const resposta = await super.get(`${this.BASE_URL}/${Api.versaoAtualLoL}/data/pt_BR/champion.json`)
     return resposta.data
   }
+
+  async listarCampeao (campeao) {
+    const resposta = await super.get(`${this.BASE_URL}/${Api.versaoAtualLoL}/data/pt_BR/champion/${campeao}.json`)
+    return resposta.data
+  }
 }
