@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import CampeaoView from '../views/CampeaoView.vue'
 import HomeView from '../views/home/HomeView.vue'
 
 const router = createRouter({
@@ -10,11 +9,6 @@ const router = createRouter({
       path: '/',
       name: 'campeões',
       component: HomeView
-    },
-    {
-      path: '/campeao',
-      name: 'detalhes do campeão',
-      component: CampeaoView
     }
   ]
 })
