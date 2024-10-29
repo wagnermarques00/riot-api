@@ -7,10 +7,14 @@
   >
   <template #title>
     <img
-      class="h-16 w-16 pr-4"
+      class="h-auto w-20 pr-4"
       :src="`https://ddragon.leagueoflegends.com/cdn/14.21.1/img/champion/${dadosCampeao.id}.png`"
       :alt="dadosCampeao.name"
     >
+  </template>
+  <template #body>
+    <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['História', 'Skins']"/>
+    <HistoriaCampeao v-if="abaSelecionada === 'História'" :historia="dadosCampeao.lore" />
   </template>
   </ModalPadrao>
 </template>
@@ -19,6 +23,8 @@
 import { ref, watch } from 'vue';
 import ApiCampeoes from '@/api/apiCampeoes';
 
+import AbasHorizontais from '@/components/AbasHorizontais.vue';
+import HistoriaCampeao from './HistoriaCampeao.vue';
 import ModalPadrao from '@/components/ModalPadrao.vue'
 
 const emit = defineEmits('fechar-modal-campeao')
@@ -29,6 +35,7 @@ const props = defineProps({
   }
 })
 
+const abaSelecionada = ref('Skins')
 const apiCampeoes = new ApiCampeoes()
 const dadosCampeao = ref({})
 const modalRef = ref(null)
