@@ -5,17 +5,15 @@
       :key="campeao.id"
       :nome="campeao.name"
       :imagem="`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeao.id}_0.jpg`"
-      @click="abrirDetalhesCampeao(campeao.name)"
+      @click="abrirDetalhesCampeao(campeao.id)"
     />
   </div>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
+import CardCampeao from '../../../components/CardCampeao.vue';
 
-import CardCampeao from './CardCampeao.vue';
-const router = useRouter();
-
+const emit = defineEmits(['abrir-detalhes-campeao'])
 const props = defineProps({
   listaCampeoes: {
     type: Object,
@@ -24,11 +22,6 @@ const props = defineProps({
 })
 
 function abrirDetalhesCampeao(campeao) {
-  router.push(
-    {
-      path: 'campeao',
-      query: { nome: campeao }
-    }
-  )
+  emit('abrir-detalhes-campeao', campeao)
 }
 </script>
