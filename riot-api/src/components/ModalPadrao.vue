@@ -13,10 +13,10 @@
           <div class="flex justify-center">
             <slot name="title" />
             <div>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white" >
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                 {{ props.titulo }}
               </h3>
-              <h4 class="text-sm font-normal text-gray-900 dark:text-white" >
+              <h4 class="text-sm font-normal text-gray-900 dark:text-white">
                 {{ props.subtitulo }}
               </h4>
             </div>
