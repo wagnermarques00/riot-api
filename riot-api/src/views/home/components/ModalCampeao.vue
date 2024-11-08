@@ -16,18 +16,20 @@
     <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['Dicas', 'História', 'Skins']" />
     <DicasCampeao v-if="abaSelecionada === 'Dicas'" :dicas-aliados="dadosCampeao.allytips" :dicas-inimigos="dadosCampeao.enemytips" />
     <HistoriaCampeao v-if="abaSelecionada === 'História'" :historia="dadosCampeao.lore" />
+    <SkinsCampeao v-if="abaSelecionada === 'Skins'" :nome-campeao="dadosCampeao.id" :skins="dadosCampeao.skins" />
   </template>
   </ModalPadrao>
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
-import ApiCampeoes from '@/api/apiCampeoes';
+import { ref, watch } from 'vue'
+import ApiCampeoes from '@/api/apiCampeoes'
 
-import AbasHorizontais from '@/components/AbasHorizontais.vue';
-import DicasCampeao from './DicasCampeao.vue';
-import HistoriaCampeao from './HistoriaCampeao.vue';
+import AbasHorizontais from '@/components/AbasHorizontais.vue'
+import DicasCampeao from './DicasCampeao.vue'
+import HistoriaCampeao from './HistoriaCampeao.vue'
 import ModalPadrao from '@/components/ModalPadrao.vue'
+import SkinsCampeao from './SkinsCampeao.vue'
 
 const emit = defineEmits('fechar-modal-campeao')
 const props = defineProps({
