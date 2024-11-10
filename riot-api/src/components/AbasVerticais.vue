@@ -22,7 +22,7 @@ const props = defineProps({
   }
 })
 
-const abaSelecionada = defineModel('abaSelecionada', { type: String, default: '' })
+const abaSelecionada = defineModel('abaSelecionada', { type: [String, Object], default: '' })
 
 
 function trocarAba(abaDestino) {
