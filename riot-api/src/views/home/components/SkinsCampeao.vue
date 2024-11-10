@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-around">
+  <div class="flex justify-between">
     <AbasVerticais v-model:aba-selecionada="abaSelecionada" :abas="listaSkins" class="overflow-y-auto scroll-smooth h-96 pr-2" />
     <div>
       <img
