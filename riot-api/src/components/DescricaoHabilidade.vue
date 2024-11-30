@@ -2,9 +2,9 @@
   <section class="flex flex-col gap-3">
     <div class="flex gap-4">
       <ImagemComSkeleton
-        altura="64"
-        largura="64"
+        :altura="64"
         :caminho="linkImagem"
+        :largura="64"
         :texto-alternativo="props.habilidade.name"
       />
       <div class="flex flex-col gap-2">
