@@ -2,10 +2,12 @@
   <div class="flex justify-between">
     <AbasVerticais v-model:aba-selecionada="abaSelecionada" :abas="listaSkins" class="overflow-y-auto scroll-smooth h-96 pr-2" />
     <div>
-      <img
-        class="h-96 w-auto rounded-lg"
-        :alt="props.nome"
-        :src="linkImagem"
+      <ImagemComSkeleton
+        class="h-96 w-auto"
+        :altura="384"
+        :caminho="linkImagem"
+        :largura="650"
+        :texto-alternativo="props.nome"
       />
     </div>
   </div>
@@ -15,6 +17,7 @@
 import { computed, ref } from 'vue';
 
 import AbasVerticais from '@/components/AbasVerticais.vue'
+import ImagemComSkeleton from '@/components/ImagemComSkeleton.vue'
 
 const props = defineProps({
   nomeCampeao: {
