@@ -6,11 +6,13 @@
     @fechar-modal="emit('fechar-modal-campeao')"
   >
   <template #title>
-    <img
-      class="h-auto w-20 pr-4"
-      :src="`https://ddragon.leagueoflegends.com/cdn/14.21.1/img/champion/${dadosCampeao.id}.png`"
-      :alt="dadosCampeao.name"
-    >
+    <ImagemComSkeleton
+      :altura="64"
+      :caminho="`https://ddragon.leagueoflegends.com/cdn/14.21.1/img/champion/${dadosCampeao.id}.png`"
+      :largura="64"
+      :texto-alternativo="dadosCampeao.name"
+      class="pr-3"
+    />
   </template>
   <template #body>
     <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['Dicas', 'Habilidades', 'História', 'Skins']" />
@@ -30,6 +32,7 @@ import AbasHorizontais from '@/components/AbasHorizontais.vue'
 import DicasCampeao from './DicasCampeao.vue'
 import HabilidadesCampeao from './HabilidadesCampeao.vue'
 import HistoriaCampeao from './HistoriaCampeao.vue'
+import ImagemComSkeleton from '@/components/ImagemComSkeleton.vue'
 import ModalPadrao from '@/components/ModalPadrao.vue'
 import SkinsCampeao from './SkinsCampeao.vue'
 
