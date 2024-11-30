@@ -2,7 +2,11 @@
   <div :style="estilosContainer" >
     <img
       :alt="props.textoAlternativo"
-      :src="props.caminho" class="rounded-lg"
+      :class="{
+        'rounded-lg': props.naoArredondarEmbaixo === false,
+        'rounded-t-lg' : props.naoArredondarEmbaixo === true,
+      }"
+      :src="props.caminho"
       :style="estilosImagem"
       @load="carregandoImagem = false"
     />
@@ -23,6 +27,10 @@ const props = defineProps({
   altura: {
     type: Number,
     default: 0
+  },
+  naoArredondarEmbaixo: {
+    type: Boolean,
+    default: false
   },
   caminho: {
     type: String,
