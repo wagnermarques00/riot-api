@@ -13,8 +13,9 @@
     >
   </template>
   <template #body>
-    <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['Dicas', 'História', 'Skins']" />
+    <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['Dicas', 'Habilidades', 'História', 'Skins']" />
     <DicasCampeao v-if="abaSelecionada === 'Dicas'" :dicas-aliados="dadosCampeao.allytips" :dicas-inimigos="dadosCampeao.enemytips" />
+    <HabilidadesCampeao v-if="abaSelecionada === 'Habilidades'" :passiva="dadosCampeao.passive" :habilidades="dadosCampeao.spells" />
     <HistoriaCampeao v-if="abaSelecionada === 'História'" :historia="dadosCampeao.lore" />
     <SkinsCampeao v-if="abaSelecionada === 'Skins'" :nome-campeao="dadosCampeao.id" :skins="dadosCampeao.skins" />
   </template>
@@ -27,6 +28,7 @@ import ApiCampeoes from '@/api/apiCampeoes'
 
 import AbasHorizontais from '@/components/AbasHorizontais.vue'
 import DicasCampeao from './DicasCampeao.vue'
+import HabilidadesCampeao from './HabilidadesCampeao.vue'
 import HistoriaCampeao from './HistoriaCampeao.vue'
 import ModalPadrao from '@/components/ModalPadrao.vue'
 import SkinsCampeao from './SkinsCampeao.vue'
