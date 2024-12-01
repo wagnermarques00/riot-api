@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import ContainerTexto from '@/components/ContainerTexto.vue';
+import ContainerTexto from '@/components/ContainerTexto.vue'
 
 const props = defineProps({
   dicasAliados: {
