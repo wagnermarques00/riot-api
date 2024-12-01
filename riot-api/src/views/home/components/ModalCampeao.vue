@@ -15,7 +15,8 @@
     />
   </template>
   <template #body>
-    <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['Dicas', 'Habilidades', 'História', 'Skins']" />
+    <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['Atributos','Dicas', 'Habilidades', 'História', 'Skins']" />
+    <AtributosCampeao v-if="abaSelecionada === 'Atributos'" />
     <DicasCampeao v-if="abaSelecionada === 'Dicas'" :dicas-aliados="dadosCampeao.allytips" :dicas-inimigos="dadosCampeao.enemytips" />
     <HabilidadesCampeao v-if="abaSelecionada === 'Habilidades'" :passiva="dadosCampeao.passive" :habilidades="dadosCampeao.spells" />
     <HistoriaCampeao v-if="abaSelecionada === 'História'" :historia="dadosCampeao.lore" />
@@ -29,6 +30,7 @@ import { ref, watch } from 'vue'
 import ApiCampeoes from '@/api/apiCampeoes'
 
 import AbasHorizontais from '@/components/AbasHorizontais.vue'
+import AtributosCampeao from './AtributosCampeao.vue'
 import DicasCampeao from './DicasCampeao.vue'
 import HabilidadesCampeao from './HabilidadesCampeao.vue'
 import HistoriaCampeao from './HistoriaCampeao.vue'
@@ -44,7 +46,7 @@ const props = defineProps({
   }
 })
 
-const abaSelecionada = ref('Skins')
+const abaSelecionada = ref('Atributos')
 const apiCampeoes = new ApiCampeoes()
 const dadosCampeao = ref({})
 const modalRef = ref(null)
