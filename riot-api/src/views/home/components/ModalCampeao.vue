@@ -16,7 +16,7 @@
   </template>
   <template #body>
     <AbasHorizontais v-model:aba-selecionada="abaSelecionada" :abas="['Atributos','Dicas', 'Habilidades', 'História', 'Skins']" />
-    <AtributosCampeao v-if="abaSelecionada === 'Atributos'" />
+    <AtributosCampeao v-if="abaSelecionada === 'Atributos'" :estatisticas="dadosCampeao.stats" />
     <DicasCampeao v-if="abaSelecionada === 'Dicas'" :dicas-aliados="dadosCampeao.allytips" :dicas-inimigos="dadosCampeao.enemytips" />
     <HabilidadesCampeao v-if="abaSelecionada === 'Habilidades'" :passiva="dadosCampeao.passive" :habilidades="dadosCampeao.spells" />
     <HistoriaCampeao v-if="abaSelecionada === 'História'" :historia="dadosCampeao.lore" />
