@@ -8,7 +8,7 @@
   <template #title>
     <ImagemComSkeleton
       :altura="64"
-      :caminho="`https://ddragon.leagueoflegends.com/cdn/14.21.1/img/champion/${dadosCampeao.id}.png`"
+      :caminho="apiCampeoes.obterLinkImagem.rosto(dadosCampeao.id)"
       :largura="64"
       :texto-alternativo="dadosCampeao.name"
       class="pr-3"
@@ -27,9 +27,8 @@
 
 <script setup>
 import { ref, watch } from 'vue'
-import ApiCampeoes from '@/api/apiCampeoes'
-
 import AbasHorizontais from '@/components/AbasHorizontais.vue'
+import ApiCampeoes from '@/api/apiCampeoes.js'
 import AtributosCampeao from './AtributosCampeao.vue'
 import DicasCampeao from './DicasCampeao.vue'
 import HabilidadesCampeao from './HabilidadesCampeao.vue'
@@ -37,6 +36,8 @@ import HistoriaCampeao from './HistoriaCampeao.vue'
 import ImagemComSkeleton from '@/components/ImagemComSkeleton.vue'
 import ModalPadrao from '@/components/ModalPadrao.vue'
 import SkinsCampeao from './SkinsCampeao.vue'
+
+const apiCampeoes = new ApiCampeoes()
 
 const emit = defineEmits('fechar-modal-campeao')
 const props = defineProps({
@@ -47,7 +48,6 @@ const props = defineProps({
 })
 
 const abaSelecionada = ref('Atributos')
-const apiCampeoes = new ApiCampeoes()
 const dadosCampeao = ref({})
 const modalRef = ref(null)
 

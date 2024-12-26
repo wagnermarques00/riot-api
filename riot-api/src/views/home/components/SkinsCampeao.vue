@@ -15,9 +15,11 @@
 
 <script setup>
 import { computed, ref } from 'vue';
-
 import AbasVerticais from '@/components/AbasVerticais.vue'
+import ApiCampeoes from '@/api/apiCampeoes'
 import ImagemComSkeleton from '@/components/ImagemComSkeleton.vue'
+
+const apiCampeoes = new ApiCampeoes()
 
 const props = defineProps({
   nomeCampeao: {
@@ -47,6 +49,6 @@ const indexSkin = computed(() => {
 })
 
 const linkImagem = computed(() => {
-  return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${props.nomeCampeao}_${indexSkin.value}.jpg`
+  return apiCampeoes.obterLinkImagem.skin(props.nomeCampeao, indexSkin.value)
 })
 </script>

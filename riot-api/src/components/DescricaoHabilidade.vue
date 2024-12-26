@@ -20,12 +20,12 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
-import ApiImagens from '@/api/apiImagens'
+import { computed } from 'vue'
+import ApiCampeoes from '@/api/apiCampeoes'
 import DescricaoHabilidadeTexto from './DescricaoHabilidadeTexto.vue'
 import ImagemComSkeleton from './ImagemComSkeleton.vue'
 
-const apiImagens = new ApiImagens()
+const apiCampeoes = new ApiCampeoes()
 
 const props = defineProps({
   habilidade: {
@@ -40,11 +40,9 @@ const props = defineProps({
 
 const linkImagem = computed(() => {
   if (props.passiva) {
-    return apiImagens.gerarLinkPassivaCampeao(props.habilidade.image.full)
+    return apiCampeoes.obterLinkImagem.passiva(props.habilidade.image.full)
   } else {
-    return apiImagens.gerarLinkHabilidadeCampeao(props.habilidade.image.full)
+    return apiCampeoes.obterLinkImagem.habilidade(props.habilidade.image.full)
   }
 })
-
-const carregandoImagem = ref(true)
 </script>
