@@ -21,7 +21,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import ApiCampeoes from '@/api/apiCampeoes'
+import ApiCampeoes from '@/api/apiCampeoes.js'
 import DescricaoHabilidadeTexto from './DescricaoHabilidadeTexto.vue'
 import ImagemComSkeleton from './ImagemComSkeleton.vue'
 

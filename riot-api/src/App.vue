@@ -10,8 +10,7 @@
 <script setup>
 import { onBeforeMount, ref } from 'vue'
 import { RouterView } from 'vue-router'
-
-import ApiVersoes from './api/apiVersoes'
+import ApiVersoes from './api/apiVersoes.js'
 import NavBar from './components/NavBar.vue'
 
 const versao = ref('')

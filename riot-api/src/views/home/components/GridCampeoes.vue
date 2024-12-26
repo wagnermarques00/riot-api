@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import ApiCampeoes from '@/api/apiCampeoes'
+import ApiCampeoes from '@/api/apiCampeoes.js'
 import CardCampeao from '@/components/CardCampeao.vue'
 
 const apiCampeoes = new ApiCampeoes()

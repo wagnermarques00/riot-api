@@ -85,7 +85,6 @@
 
 <script setup>
 import { ref } from 'vue'
-
 import BarraValoresAtributos from '@/components/BarraValoresAtributos.vue'
 import ContainerTexto from '@/components/ContainerTexto.vue'
 import SliderNumerico from '@/components/SliderNumerico.vue'

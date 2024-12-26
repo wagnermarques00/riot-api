@@ -18,7 +18,6 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-
 import ApiCampeoes from '@/api/apiCampeoes.js'
 import DropDown from '@/components/DropDown.vue'
 import GridCampeoes from './components/GridCampeoes.vue'

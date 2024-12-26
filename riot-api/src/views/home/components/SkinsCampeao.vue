@@ -16,7 +16,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import AbasVerticais from '@/components/AbasVerticais.vue'
-import ApiCampeoes from '@/api/apiCampeoes'
+import ApiCampeoes from '@/api/apiCampeoes.js'
 import ImagemComSkeleton from '@/components/ImagemComSkeleton.vue'
 
 const apiCampeoes = new ApiCampeoes()
