@@ -11,8 +11,8 @@
 import { onBeforeMount, ref } from 'vue'
 import { RouterView } from 'vue-router'
 
-import ApiVersoes from './api/apiVersoes';
-import NavBar from './components/NavBar.vue';
+import ApiVersoes from './api/apiVersoes'
+import NavBar from './components/NavBar.vue'
 
 const versao = ref('')
 const carregado = ref(false)

@@ -1,7 +1,7 @@
 <template>
   <p>{{ props.texto }}</p>
-  <div class="flex h-4 text-xs font-bold" :style="`width: ${larguraValorTotal}px;`">
-    <div v-if="props.valorPrimario > 0" :class="classePrimario" :style="`width: ${larguraValorPrimario}px;`">{{ valorPrimario }}</div>
+  <div class="flex h-4 text-xs font-bold" :style="`width: ${larguraValorTotal}px`">
+    <div v-if="props.valorPrimario > 0" :class="classePrimario" :style="`width: ${larguraValorPrimario}px`">{{ valorPrimario }}</div>
     <div v-if="props.valorSecundario" :class="classeSecundario" :style="`width: ${larguraValorSecundario}px`">{{ valorSecundario }}</div>
     <div v-if="props.valorTerciario" :class="classeTerciario" :style="`width: ${larguraValorTerciario}px`">{{ valorTerciario }}</div>
   </div>

@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref } from 'vue'
 import AbasVerticais from '@/components/AbasVerticais.vue'
 import ApiCampeoes from '@/api/apiCampeoes'
 import ImagemComSkeleton from '@/components/ImagemComSkeleton.vue'
@@ -44,7 +44,7 @@ const indexSkin = computed(() => {
 
     return skinSelecionada.num
   } else {
-    return 0;
+    return 0
   }
 })
 

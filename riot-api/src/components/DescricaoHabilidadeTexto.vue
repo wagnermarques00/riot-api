@@ -15,7 +15,7 @@ const props = defineProps({
 const descricaoTratada = ref('')
 
 onMounted(() => {
-  descricaoTratada.value = props.descricao;
+  descricaoTratada.value = props.descricao
   tratarClassesDescricao(descricaoTratada.value)
 })
 
@@ -57,7 +57,7 @@ function removerQuebraDupla(stringHabilidade) {
 
 function tratarClassesDescricao(descricao) {
   if (!descricao) {
-    return '';
+    return ''
   }
   let descricaoComClasses = descricao
   descricaoComClasses = adicionarClasseTextoAzul(descricaoComClasses)
