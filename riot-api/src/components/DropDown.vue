@@ -29,8 +29,6 @@
 <script setup>
 import { ref } from 'vue'
 
-const dropDownExpandido = ref(false)
-
 const emit = defineEmits(['opcao-clicada'])
 const props = defineProps({
   opcoes: {
@@ -42,6 +40,8 @@ const props = defineProps({
     required: true
   }
 })
+
+const dropDownExpandido = ref(false)
 
 function manusearEstadoDropdown() {
   dropDownExpandido.value = !dropDownExpandido.value

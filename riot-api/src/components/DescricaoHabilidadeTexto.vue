@@ -14,6 +14,11 @@ const props = defineProps({
 
 const descricaoTratada = ref('')
 
+onMounted(() => {
+  descricaoTratada.value = props.descricao;
+  tratarClassesDescricao(descricaoTratada.value)
+})
+
 function adicionarClasseTextoAzul(stringHabilidade) {
   stringHabilidade = stringHabilidade.replaceAll('<OnHit>', '<OnHit class="text-blue-500">')
   return stringHabilidade.replaceAll('<magicDamage>', '<magicDamage class="text-blue-500">')
@@ -65,9 +70,4 @@ function tratarClassesDescricao(descricao) {
 
   descricaoTratada.value = descricaoComClasses
 }
-
-onMounted(() => {
-  descricaoTratada.value = props.descricao;
-  tratarClassesDescricao(descricaoTratada.value)
-})
 </script>

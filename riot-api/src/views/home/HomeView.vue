@@ -19,12 +19,13 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 
-import ApiCampeoes from '@/api/apiCampeoes'
+import ApiCampeoes from '@/api/apiCampeoes.js'
 import DropDown from '@/components/DropDown.vue';
 import GridCampeoes from './components/GridCampeoes.vue'
 import ModalCampeao from './components/ModalCampeao.vue'
 
 const apiCampeoes = new ApiCampeoes()
+
 const papeis = [
   { original: 'Assassin', traduzido: 'Assassino' },
   { original: 'Marksman', traduzido: 'Atirador' },
