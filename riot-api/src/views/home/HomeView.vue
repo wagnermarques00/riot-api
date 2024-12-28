@@ -6,10 +6,7 @@
       @opcao-clicada="filtrarPapeis"
     />
   </div>
-  <GridCampeoes
-    :lista-campeoes="campeoes"
-    @abrir-detalhes-campeao="idCampeaoSelecionado = $event"
-  />
+  <GridCampeoes @abrir-detalhes-campeao="idCampeaoSelecionado = $event" />
   <ModalCampeao
     :id-campeao-selecionado="idCampeaoSelecionado"
     @fechar-modal-campeao="idCampeaoSelecionado = ''"
@@ -17,13 +14,10 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
-import ApiCampeoes from '@/api/apiCampeoes.js'
+import { ref } from 'vue'
 import DropDown from '@/components/DropDown.vue'
 import GridCampeoes from './components/GridCampeoes.vue'
 import ModalCampeao from './components/ModalCampeao.vue'
-
-const apiCampeoes = new ApiCampeoes()
 
 const papeis = [
   { original: 'Assassin', traduzido: 'Assassino' },
@@ -35,14 +29,9 @@ const papeis = [
 ]
 const papeisTraduzidos = papeis.map(papel => papel.traduzido)
 
-const campeoes = ref([])
 const idCampeaoSelecionado = ref('')
 
 function filtrarPapeis(value) {
   alert(value)
 }
-
-onMounted(async () => {
-  campeoes.value = await apiCampeoes.listarCampeoes()
-})
 </script>
