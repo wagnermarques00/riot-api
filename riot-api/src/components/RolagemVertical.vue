@@ -15,7 +15,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
-const PIXELS_ROLAGEM = 360
+const PIXELS_ROLAGEM = 240
 
 const mostrarBotao = ref(false)
 const posicaoAnterior = ref(0)
