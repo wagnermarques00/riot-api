@@ -1,3 +1,7 @@
 <template>
-  <p>Ícones</p>
+  <GridIcones />
 </template>
+
+<script setup>
+import GridIcones from './components/GridIcones.vue'
+</script>
