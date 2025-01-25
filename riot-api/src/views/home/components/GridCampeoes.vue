@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap justify-center gap-8">
-    <CardCampeao
+    <CardPadrao
       v-for="campeao in listaVisivel"
       :key="campeao.id"
       :nome="campeao.name"
@@ -14,7 +14,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import ApiCampeoes from '@/api/apiCampeoes.js'
-import CardCampeao from '@/components/CardCampeao.vue'
+import CardPadrao from '@/components/CardPadrao.vue'
 import RolagemVertical from '@/components/RolagemVertical.vue'
 
 const apiCampeoes = new ApiCampeoes()
