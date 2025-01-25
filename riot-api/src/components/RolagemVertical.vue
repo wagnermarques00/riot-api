@@ -1,7 +1,7 @@
 <template>
   <button
     v-if="mostrarBotao"
-    class="fixed bottom-4 right-4 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center justify-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700"
+    class="fixed bottom-4 right-4 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center justify-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-110"
     title="Voltar para o topo"
     @click="voltarParaTopo"
   >
