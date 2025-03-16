@@ -27,8 +27,8 @@ onMounted(async () => {
 
 async function carregarTodosFeiticos() {
   const resposta = await apiFeiticos.listarFeiticos()
-  const entradasOrdenadas = Object.entries(resposta).sort((a, b) => a[0] - b[0])
-  listaFeiticos.value = Object.fromEntries(entradasOrdenadas)
+  const feiticosOrdenados = resposta.sort((a, b) => a.name.localeCompare(b.name))
+  listaFeiticos.value = feiticosOrdenados
 }
 
 async function abrirDetalhesFeitico(value) {
