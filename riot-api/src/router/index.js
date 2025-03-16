@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import FeiticosView from '../views/feiticos/FeiticosView.vue'
 import HomeView from '../views/home/HomeView.vue'
 import IconesView from '../views/icones/IconesView.vue'
 
@@ -10,6 +11,11 @@ const router = createRouter({
       path: '/',
       name: 'campeões',
       component: HomeView
+    },
+    {
+      path: '/feiticos',
+      name: 'feitiços',
+      component: FeiticosView
     },
     {
       path: '/icones',

@@ -3,6 +3,8 @@
     <CardPadrao
       v-for="campeao in listaVisivel"
       :key="campeao.id"
+      :altura="288"
+      :largura="158"
       :nome="campeao.name"
       :imagem="apiCampeoes.obterLinkImagem.splash(campeao.id)"
       @click="abrirDetalhesCampeao(campeao.id)"
