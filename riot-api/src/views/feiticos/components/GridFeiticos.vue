@@ -3,6 +3,8 @@
     <CardPadrao
       v-for="feitico in listaFeiticos"
       :key="feitico.id"
+      altura="96"
+      largura="96"
       :nome="feitico.name"
       :imagem="apiFeiticos.obterLinkImagem.feitico(feitico.id)"
       @click="abrirDetalhesFeitico(feitico.id)"
@@ -32,5 +34,4 @@ async function carregarTodosFeiticos() {
 async function abrirDetalhesFeitico(value) {
   alert(value)
 }
-
 </script>
