@@ -7,7 +7,7 @@
       largura="96"
       :nome="feitico.name"
       :imagem="apiFeiticos.obterLinkImagem.feitico(feitico.id)"
-      @click="abrirDetalhesFeitico(feitico.id)"
+      @click="abrirDetalhesFeitico(feitico)"
     />
   </div>
 </template>

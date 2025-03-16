@@ -1,8 +1,8 @@
 <template>
-  <GridFeiticos @abrir-detalhes-feitico="idFeiticoSelecionado = $event"/>
+  <GridFeiticos @abrir-detalhes-feitico="feitico = $event"/>
   <ModalFeitico
-    :id-feitico-selecionado="idFeiticoSelecionado"
-    @fechar-modal-feitico="idFeiticoSelecionado = ''"
+    :feitico="feitico"
+    @fechar-modal-feitico="feitico = ''"
   />
 </template>
 
@@ -11,5 +11,5 @@ import { ref } from 'vue'
 import GridFeiticos from './components/GridFeiticos.vue'
 import ModalFeitico from './components/ModalFeitico.vue'
 
-const idFeiticoSelecionado = ref('')
+const feitico = ref('')
 </script>
