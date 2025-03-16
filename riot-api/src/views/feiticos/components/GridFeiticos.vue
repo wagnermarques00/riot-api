@@ -19,6 +19,8 @@ import CardPadrao from '@/components/CardPadrao.vue'
 
 const apiFeiticos = new ApiFeiticos()
 
+const emit = defineEmits(['abrir-detalhes-feitico'])
+
 const listaFeiticos = ref({})
 
 onMounted(async () => {
@@ -31,7 +33,7 @@ async function carregarTodosFeiticos() {
   listaFeiticos.value = feiticosOrdenados
 }
 
-async function abrirDetalhesFeitico(value) {
-  alert(value)
+async function abrirDetalhesFeitico(feitico) {
+  emit('abrir-detalhes-feitico', feitico)
 }
 </script>
