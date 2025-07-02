@@ -14,8 +14,10 @@
     />
   </template>
   <template #body>
-    <div>{{ props.feitico.description }}</div>
-    <div>Tempo de recarga: {{ props.feitico.cooldownBurn }} segundos</div>
+    <ContainerTexto>
+      <div>{{ props.feitico.description }}</div>
+      <div>Tempo de recarga: {{ props.feitico.cooldownBurn }} segundos</div>
+    </ContainerTexto>
   </template>
   </ModalPadrao>
 </template>
@@ -23,6 +25,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import ApiFeiticos from '@/api/apiFeiticos.js'
+import ContainerTexto from '@/components/ContainerTexto.vue'
 import ImagemComSkeleton from '@/components/ImagemComSkeleton.vue'
 import ModalPadrao from '@/components/ModalPadrao.vue'
 
