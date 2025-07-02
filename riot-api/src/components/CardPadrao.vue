@@ -1,6 +1,7 @@
 <template>
   <div
     class="flex flex-col max-w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
+    :style="`max-width: ${props.largura}px`"
     :title="`Clique para ver os detalhes de ${props.nome}`"
   >
     <ImagemComSkeleton
