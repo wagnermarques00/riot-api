@@ -2,7 +2,9 @@
 Estudo de consumo de API da Riot com Vue.js
 
 
-## Link: [Clique aqui](https://estudo-riot-api.netlify.app/)
+## Link: 
+[Clique aqui](https://estudo-riot-api.netlify.app/)
+
 
 ## Dados:
 - Fonte do estudo: [Data Dragon](https://developer.riotgames.com/docs/lol)
