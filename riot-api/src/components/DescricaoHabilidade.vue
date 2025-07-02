@@ -9,7 +9,7 @@
       />
       <div class="flex flex-col gap-2">
         <h3 class="text-lg font-bold dark:text-white">{{ props.habilidade.name }}</h3>
-        <DescricaoHabilidadeTexto :descricao="props.habilidade.description" />
+        <DescricaoTexto :descricao="props.habilidade.description" />
       </div>
     </div>
     <div>
@@ -22,7 +22,7 @@
 <script setup>
 import { computed } from 'vue'
 import ApiCampeoes from '@/api/apiCampeoes.js'
-import DescricaoHabilidadeTexto from './DescricaoHabilidadeTexto.vue'
+import DescricaoTexto from './DescricaoTexto.vue'
 import ImagemComSkeleton from './ImagemComSkeleton.vue'
 
 const apiCampeoes = new ApiCampeoes()
