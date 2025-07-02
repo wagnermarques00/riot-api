@@ -3,8 +3,8 @@
     <CardPadrao
       v-for="item in listaVisivel"
       :key="item.id"
-      :altura="128"
-      :largura="128"
+      :altura="160"
+      :largura="160"
       :nome="item.name"
       :imagem="apiItens.obterLinkImagem(item.id)"
       @click="abrirDetalhesItem(item)"
