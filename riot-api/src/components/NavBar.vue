@@ -6,8 +6,9 @@
           <li>
             <RouterLink
               to="/"
-              class="block py-2 px-3 bg-blue-700 rounded md:bg-transparent  md:p-0"
+              class="block py-2 px-3 bg-blue-700 rounded md:bg-transparent md:p-0"
               :class="gerarClasseLink('/')"
+              aria-current="page"
             >
               Campeões
             </RouterLink>
@@ -15,7 +16,7 @@
           <li>
             <RouterLink
               to="/icones"
-              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               :class="gerarClasseLink('/icones')"
             >
               Ícones
@@ -24,7 +25,7 @@
           <li>
             <RouterLink
               to="/feiticos"
-              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               :class="gerarClasseLink('/feiticos')"
             >
               Feitiços
@@ -33,7 +34,7 @@
           <li>
             <RouterLink
               to="/itens"
-              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               :class="gerarClasseLink('/itens')"
             >
               Itens
@@ -53,10 +54,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
 
 const route = useRoute()
+
+const rotaAtual = computed(() => route.path)
 
 function gerarClasseLink(link) {
   return {
@@ -71,6 +74,4 @@ const props = defineProps({
     required: true
   }
 })
-
-const rotaAtual = ref(route.path)
 </script>
