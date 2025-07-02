@@ -14,8 +14,8 @@ export default class ApiCampeoes extends Api {
   obterLinkImagem = {
     habilidade: (habilidade) => `${this.BASE_URL}/${Api.versaoAtualLoL}/img/spell/${habilidade}`,
     passiva: (passiva) => `${this.BASE_URL}/${Api.versaoAtualLoL}/img/passive/${passiva}`,
-    rosto: (id) => `https://ddragon.leagueoflegends.com/cdn/14.21.1/img/champion/${id}.png`,
-    skin: (nome, posicao) => `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${nome}_${posicao}.jpg`,
-    splash: (id) => `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_0.jpg`
+    rosto: (id) => `${this.BASE_URL}/${Api.versaoAtualLoL}/img/champion/${id}.png`,
+    skin: (nome, posicao) => `${this.BASE_URL}/img/champion/splash/${nome}_${posicao}.jpg`,
+    splash: (id) => `${this.BASE_URL}/img/champion/loading/${id}_0.jpg`
   }
 }
