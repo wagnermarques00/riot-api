@@ -21,7 +21,7 @@ import RolagemVertical from '@/components/RolagemVertical.vue'
 
 const apiItens = new ApiItens()
 
-const ITENS_POR_ROLAGEM = 30
+const ITENS_POR_ROLAGEM = 60
 
 const emit = defineEmits(['abrir-detalhes-item'])
 
