@@ -39,7 +39,7 @@ import SkinsCampeao from './SkinsCampeao.vue'
 
 const apiCampeoes = new ApiCampeoes()
 
-const emit = defineEmits('fechar-modal-campeao')
+const emit = defineEmits(['fechar-modal-campeao'])
 const props = defineProps({
   idCampeaoSelecionado: {
     type: String,

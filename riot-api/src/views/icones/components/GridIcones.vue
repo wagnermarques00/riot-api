@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-wrap gap-8">
+  <div class="flex flex-wrap gap-8 justify-center">
     <ImagemComSkeleton
       v-for="icone in listaVisivel"
       :key="icone.id"
       :altura="128"
       :largura="128"
       :caminho="apiIconesInvocadores.obterLinkImagem.icone(icone.image.full)"
-      :texto-alternativo="icone.id"
+      :texto-alternativo="String(icone.id)"
     />
   </div>
   <RolagemVertical @rolou-para-baixo="carregarMaisIcones" />

@@ -2,7 +2,7 @@
   <div class="flex flex-wrap justify-center gap-8">
     <CardPadrao
       v-for="item in listaVisivel"
-      :key="item.id"
+      :key="String(item.id)"
       :altura="160"
       :largura="160"
       :nome="item.name"

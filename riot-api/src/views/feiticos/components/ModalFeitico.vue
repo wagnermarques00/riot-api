@@ -31,7 +31,7 @@ import ModalPadrao from '@/components/ModalPadrao.vue'
 
 const apiFeiticos = new ApiFeiticos()
 
-const emit = defineEmits('fechar-modal-feitico')
+const emit = defineEmits(['fechar-modal-feitico'])
 const props = defineProps({
   feitico: {
     type: Object,

@@ -28,7 +28,7 @@ import ModalPadrao from '@/components/ModalPadrao.vue'
 
 const apiItens = new ApiItens()
 
-const emit = defineEmits('fechar-modal-item')
+const emit = defineEmits(['fechar-modal-item'])
 const props = defineProps({
   item: {
     type: Object,
